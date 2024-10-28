@@ -1,0 +1,38 @@
+{
+ "usuario": [
+  {
+    "id": 1,
+    "login": "123456",
+    "senha": "123456",
+    "nome": "Moss"
+  }
+ ],
+  "curso": [
+    {
+      "nomeCurso": "Ciência da computação",
+      "idCurso": 1
+    }
+  ],
+  "materia": [
+    {
+      "nomeMateria": "Desenvolvimento Front-End",
+      "professor": "Air",
+      "periodo": 4,
+      "idMateria": 1,
+      "idCurso": 1
+    }
+  ],
+  "atividade": [
+    {
+      "titulo": "Botafogo",
+      "dataHoje": "28/10/2024",
+      "dataLimite": "04/11/2024",
+      "descricao": "Sus",
+      "pontos": 5,
+      "idAtividade": 1,
+      "idUsuario": 1,
+      "idCurso": 1,
+      "idMateria": 1
+    }
+  ]
+}
