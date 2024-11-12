@@ -1,32 +1,47 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UsuarioService } from '../services/usuario.service';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
-export class LoginComponent {
-  email: string = '';
-  senha: string = '';
+export class LoginComponent implements OnInit {
+
+  loginForm!: FormGroup;
 
   constructor(private usuarioService: UsuarioService,private router: Router) {
+    // this.loginForm.valueChanges.subscribe((value) => {
+    //   console.log(value);
+    // });
   }
 
-  onSubmit() {
-    console.log("email" + this.email + "\nsenha:" + this.senha);
-    this.usuarioService.login(this.email, this.senha).subscribe((dados) => {
-      
-      if(dados.length > 0) {
-        this.router.navigate(['/atividade']);
-      } else {
-        alert("Login ou senha incorretos");
-      }
+  ngOnInit(): void {
+    this.loginForm = new FormGroup({
+      email: new FormControl('', [Validators.required]),
+      password: new FormControl('', [Validators.required])
     });
+  }
+
+  onSubmit(): void {
+    if (this.loginForm.valid) {
+      console.log("LoginForm é válido");
+      const { email, password } = this.loginForm.value;
+      this.usuarioService.login(email, password).subscribe(users => {
+        if (users.length > 0) {
+          console.log("Login realizado");
+          
+        } else {
+          console.log("Credenciais inválidas");
+        } 
+      });
+    } else {
+      return;
+    }
   }
 }

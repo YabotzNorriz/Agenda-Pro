@@ -30,21 +30,22 @@
         <div class="row justify-content-center">
           <div class="col-xl-5 col-md-8">
             <form
-              (ngSubmit)="onSubmit()"
-              #loginForm="ngForm"
+              (submit)="onSubmit()"
+              [formGroup]="loginForm"
               class="bg-white rounded shadow-5-strong p-5"
             >
+              <h1>Login</h1>
+              <br />
               <!-- Email input -->
               <div class="form-outline mb-4" data-mdb-input-init>
                 <input
                   type="email"
                   name="email"
-                  id="form1Example1"
+                  id="email"
                   class="form-control"
+                  formControlName="email"
                 />
-                <label class="form-label" for="form1Example1"
-                  >Endereço de Email</label
-                >
+                <label class="form-label" for="email">Endereço de Email</label>
               </div>
 
               <!-- Password input -->
@@ -52,44 +53,24 @@
                 <input
                   type="password"
                   name="password"
-                  id="form1Example2"
+                  id="password"
                   class="form-control"
+                  formControlName="password"
                 />
-                <label class="form-label" for="form1Example2">Senha</label>
+                <label class="form-label" for="password">Senha</label>
               </div>
+              <!-- Submit button -->
 
               <!-- 2 column grid layout for inline styling -->
-              <div class="row mb-4">
-                <div class="col d-flex justify-content-center">
-                  <!-- Checkbox -->
-                  <div class="form-check">
-                    <input
-                      class="form-check-input"
-                      type="checkbox"
-                      value=""
-                      id="form1Example3"
-                      checked
-                    />
-                    <label class="form-check-label" for="form1Example3">
-                      Remember me
-                    </label>
-                  </div>
-                </div>
-
-                <div class="col text-center">
-                  <!-- Simple link -->
-                  <a href="#!">Esquece a Senha?</a>
-                </div>
+              <div class="col text-center">
+                <button type="submit" class="btn btn-primary btn-block">
+                  Login
+                </button>
+                <br />
+                <br />
+                <!-- Simple link -->
+                <a href="#!">Cadastrar</a>
               </div>
-
-              <!-- Submit button -->
-              <button
-                type="submit"
-                class="btn btn-primary btn-block"
-                data-mdb-ripple-init
-              >
-                Login
-              </button>
             </form>
           </div>
         </div>

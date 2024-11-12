@@ -14,11 +14,27 @@ export class UsuarioService {
     console.log("usuario ativado");
   }
 
-  // getUsuario() : Observable<Usuario[]>{
-  //   return this.http.get<Usuario[]>(this.urlAPI);
-  // }
+  getUsuarios() : Observable<Usuario[]>{
+    return this.http.get<Usuario[]>(this.urlAPI);
+  }
 
-  login(login: string, senha: string): Observable<any> { 
+  getUsuarioById(id: string | number): Observable<Usuario> {
+    return this.http.get<Usuario>(this.urlAPI + "/" + id);
+  }
+
+  alterarCliente(usuario: Usuario): Observable<Usuario> {
+    return this.http.put<Usuario>(this.urlAPI + "/" + usuario.id, usuario);
+  }
+
+  cadastrarUsuario(usuario: Usuario): Observable<Usuario> {
+    return this.http.post<Usuario>(this.urlAPI, usuario);
+  }
+
+  excluirUsuario(usuario: Usuario): Observable<Usuario> {
+    return this.http.delete<Usuario>( this.urlAPI + "/" + usuario.id );
+  }
+
+  login(login: string, senha: string): Observable<any> {
     return this.http.get<any[]>(`${this.urlAPI}?login=${login}&senha=${senha}`);
   }
 }

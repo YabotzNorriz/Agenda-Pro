@@ -4,7 +4,7 @@ export interface Atividade {
   dataEntrega: Date;
   descricao: string;
   pontos: number;
-  idAtividade: number;
+  idAtividade?: number;
   idCurso: number;
   idMateria: number;
 }
