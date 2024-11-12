@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
       this.usuarioService.login(email, password).subscribe(users => {
         if (users.length > 0) {
           console.log("Login realizado");
-          
+          this.router.navigate(['/home']);
         } else {
           console.log("Credenciais inválidas");
         } 

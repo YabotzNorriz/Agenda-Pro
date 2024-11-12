@@ -1,81 +1,77 @@
-<!--Main Navigation-->
-<header>
-  <style>
+<style>
+  #intro {
+    background-image: url(https://mdbootstrap.com/img/new/fluid/city/008.jpg);
+    height: 100vh;
+  }
+
+  /* Height for devices larger than 576px */
+  @media (min-width: 992px) {
     #intro {
-      background-image: url(https://mdbootstrap.com/img/new/fluid/city/008.jpg);
-      height: 100vh;
+      margin-top: -58.59px;
     }
+  }
 
-    /* Height for devices larger than 576px */
-    @media (min-width: 992px) {
-      #intro {
-        margin-top: -58.59px;
-      }
-    }
+  .navbar .nav-link {
+    color: #fff !important;
+  }
+</style>
 
-    .navbar .nav-link {
-      color: #fff !important;
-    }
-  </style>
+<!-- Navbar -->
 
-  <!-- Navbar -->
+<!-- Background image -->
+<div id="intro" class="bg-image shadow-2-strong">
+  <div
+    class="mask d-flex align-items-center h-100"
+    style="background-color: rgba(0, 0, 0, 0.8)"
+  >
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-xl-5 col-md-8">
+          <form
+            (submit)="onSubmit()"
+            [formGroup]="loginForm"
+            class="bg-white rounded shadow-5-strong p-5"
+          >
+            <h1>Login</h1>
+            <br />
+            <!-- Email input -->
+            <div class="form-outline mb-4" data-mdb-input-init>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="form-control"
+                formControlName="email"
+              />
+              <label class="form-label" for="email">Endereço de Email</label>
+            </div>
 
-  <!-- Background image -->
-  <div id="intro" class="bg-image shadow-2-strong">
-    <div
-      class="mask d-flex align-items-center h-100"
-      style="background-color: rgba(0, 0, 0, 0.8)"
-    >
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-xl-5 col-md-8">
-            <form
-              (submit)="onSubmit()"
-              [formGroup]="loginForm"
-              class="bg-white rounded shadow-5-strong p-5"
-            >
-              <h1>Login</h1>
+            <!-- Password input -->
+            <div class="form-outline mb-4" data-mdb-input-init>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                class="form-control"
+                formControlName="password"
+              />
+              <label class="form-label" for="password">Senha</label>
+            </div>
+            <!-- Submit button -->
+
+            <!-- 2 column grid layout for inline styling -->
+            <div class="col text-center">
+              <button type="submit" class="btn btn-primary btn-block">
+                Login
+              </button>
               <br />
-              <!-- Email input -->
-              <div class="form-outline mb-4" data-mdb-input-init>
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  class="form-control"
-                  formControlName="email"
-                />
-                <label class="form-label" for="email">Endereço de Email</label>
-              </div>
-
-              <!-- Password input -->
-              <div class="form-outline mb-4" data-mdb-input-init>
-                <input
-                  type="password"
-                  name="password"
-                  id="password"
-                  class="form-control"
-                  formControlName="password"
-                />
-                <label class="form-label" for="password">Senha</label>
-              </div>
-              <!-- Submit button -->
-
-              <!-- 2 column grid layout for inline styling -->
-              <div class="col text-center">
-                <button type="submit" class="btn btn-primary btn-block">
-                  Login
-                </button>
-                <br />
-                <br />
-                <!-- Simple link -->
-                <a href="#!">Cadastrar</a>
-              </div>
-            </form>
-          </div>
+              <br />
+              <!-- Simple link -->
+              <a href="#!">Cadastrar</a>
+            </div>
+          </form>
         </div>
       </div>
     </div>
   </div>
-  <!-- Background image -->
-</header>
+</div>
