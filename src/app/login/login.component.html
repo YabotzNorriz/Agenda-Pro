@@ -1,22 +1,12 @@
 <style>
   #intro {
-    background-image: url(https://mdbootstrap.com/img/new/fluid/city/008.jpg);
+    background-image: url(/backgroundLogin.jpg);
+    background-size: cover;
+    background-position: center;
+    max-width: 100vw;
     height: 100vh;
   }
-
-  /* Height for devices larger than 576px */
-  @media (min-width: 992px) {
-    #intro {
-      margin-top: -58.59px;
-    }
-  }
-
-  .navbar .nav-link {
-    color: #fff !important;
-  }
 </style>
-
-<!-- Navbar -->
 
 <!-- Background image -->
 <div id="intro" class="bg-image shadow-2-strong">
@@ -32,7 +22,7 @@
             [formGroup]="loginForm"
             class="bg-white rounded shadow-5-strong p-5"
           >
-            <h1>Login</h1>
+            <h1 class="login-text">Login</h1>
             <br />
             <!-- Email input -->
             <div class="form-outline mb-4" data-mdb-input-init>

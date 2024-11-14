@@ -1,42 +1,27 @@
 <nav class="main-header navbar navbar-expand navbar-dark custom-navbar">
   <!-- Left navbar links -->
-  <ul class="navbar-nav">
+  <ul class="navbar-nav" style="text-align: center; align-items: center">
     <li class="nav-item">
       <!-- <a href=" " class="navbar-brand"><b class="text-light">App Clientes</b></a> -->
-      <a routerLink="/" class="navbar-brand">Inserir Logo Aqui</a>
+      <a routerLink="/" class="navbar-brand"
+        ><img class="img-logo" src="/AgendaProLogo.png"
+      /></a>
     </li>
     <li class="nav-item d-none d-sm-inline-block">
       <!-- <a href="../../index3.html" class="nav-link">Lista Clientes</a> -->
-      <a routerLink="/home" routerLinkActive="active" class="nav-link">Home</a>
+      <a
+        text-align="center"
+        routerLink="/home"
+        routerLinkActive="active"
+        class="nav-link"
+        >Home</a
+      >
     </li>
     <li class="nav-item d-none d-sm-inline-block">
       <!-- <a href="/quem-somos" class="nav-link">Quem somos?</a> -->
       <a routerLink="/usuario" routerLinkActive="active" class="nav-link"
         >Usuário</a
       >
-    </li>
-  </ul>
-
-  <!-- Right navbar links -->
-  <ul class="navbar-nav ml-auto">
-    <!-- Notifications Dropdown Menu -->
-    <li class="nav-item dropdown">
-      <a class="nav-link" data-toggle="dropdown" href="#">
-        <i class="far fa-bell"></i>
-        <span class="badge badge-warning navbar-badge">15</span>
-      </a>
-      <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-        <span class="dropdown-item dropdown-header">12 Notificações</span>
-        <div class="dropdown-divider"></div>
-        <a href="#" class="dropdown-item">
-          <i class="fas fa-envelope mr-2"></i> 4 novos clientes
-          <span class="float-right text-muted text-sm">3 mins</span>
-        </a>
-        <div class="dropdown-divider"></div>
-        <a href="#" class="dropdown-item dropdown-footer"
-          >Ver Todas Notificações</a
-        >
-      </div>
     </li>
   </ul>
 </nav>

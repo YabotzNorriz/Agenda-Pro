@@ -1,0 +1,7 @@
+.login-text {
+  align-items: center;
+  justify-content: center;
+  display: inline-block; /* Garante que a borda ocupe apenas o tamanho do texto */
+  border-bottom: 3px solid #ff8a34; /* Define a cor e a largura da borda */
+  padding-bottom: 2px; /* Ajusta o espaçamento entre o texto e a borda */
+}

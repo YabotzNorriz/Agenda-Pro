@@ -11,17 +11,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
-export class AppComponent implements OnInit {
-  mostrarHeader: boolean = false;
-
+export class AppComponent {
   constructor(private router: Router) {}
-
-  ngOnInit(): void {
-    this.router.events.subscribe((event) => {
-      if (event instanceof NavigationEnd) {
-        this.mostrarHeader = event.url !== '/login';
-      }
-    });
-  }
   title = 'AgendaPro';
 }
