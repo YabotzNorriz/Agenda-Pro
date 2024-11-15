@@ -1,4 +1,4 @@
-.login-text {
+.atividade-text {
   align-items: center;
   justify-content: center;
   display: inline-block;
@@ -6,14 +6,15 @@
   padding-bottom: 2px;
 }
 
-.btn-login {
-  background-color: #ff8a34;
-  width: 150px;
-  height: 50px;
-  font-size: 1.2em;
+.resumo-text {
+  align-items: center;
+  justify-content: center;
+  display: inline-block;
+  border-bottom: 3px solid #ff8a34;
+  padding-bottom: 1px;
 }
 
-.btn-cadastro {
+.btn-confirmar {
   background-color: #ff8a34;
   width: 150px;
   height: 50px;

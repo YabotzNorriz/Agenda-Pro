@@ -1,25 +1,22 @@
 {
- "usuario": [
-  {
-    "id": 1,
-    "login": "123456",
-    "senha": "123456",
-    "nome": "Moss"
-  }
- ],
-  "curso": [
+  "usuario": [
     {
-      "nomeCurso": "Ciência da computação",
-      "idCurso": 1
-    }
-  ],
-  "materia": [
+      "id": 260271,
+      "name": "Moss",
+      "email": "moss@moss.com",
+      "password": "123456"
+    },
     {
-      "nomeMateria": "Desenvolvimento Front-End",
-      "professor": "Air",
-      "periodo": 4,
-      "idMateria": 1,
-      "idCurso": 1
+      "id": 46024,
+      "name": "minhoco",
+      "email": "minhoco@minhoco",
+      "password": "654321"
+    },
+    {
+      "id": 258459,
+      "name": "Tobito",
+      "email": "tobito@obito.com",
+      "password": "24680"
     }
   ],
   "atividade": [
@@ -32,7 +29,8 @@
       "idAtividade": 1,
       "idUsuario": 1,
       "idCurso": 1,
-      "idMateria": 1
+      "idMateria": 1,
+      "id": "ac16"
     }
   ]
 }

@@ -1,10 +1,11 @@
 export interface Atividade {
+  idAtividade?: number;
   titulo: string;
+  descricao: string;
+  curso: number;
+  materia: number;
   dataHoje: Date;
   dataEntrega: Date;
-  descricao: string;
   pontos: number;
-  idAtividade?: number;
-  idCurso: number;
-  idMateria: number;
+  idUsuario?: number;
 }

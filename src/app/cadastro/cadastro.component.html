@@ -19,11 +19,23 @@
         <div class="col-xl-5 col-md-8">
           <form
             (submit)="onSubmit()"
-            [formGroup]="loginForm"
+            [formGroup]="cadastroForm"
             class="bg-white rounded shadow-5-strong p-5"
           >
-            <h1 class="login-text">Login</h1>
+            <h1 class="cadastro-text">Cadastro</h1>
             <br />
+            <br />
+            <!-- Nome -->
+            <div class="form-outline mb-4" data-mdb-input-init>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                class="form-control"
+                formControlName="name"
+              />
+              <label class="form-label" for="name">Nome</label>
+            </div>
             <!-- Email input -->
             <div class="form-outline mb-4" data-mdb-input-init>
               <input
@@ -35,7 +47,6 @@
               />
               <label class="form-label" for="email">Endereço de Email</label>
             </div>
-
             <!-- Password input -->
             <div class="form-outline mb-4" data-mdb-input-init>
               <input
@@ -47,7 +58,6 @@
               />
               <label class="form-label" for="password">Senha</label>
             </div>
-            <!-- Submit button -->
 
             <!-- 2 column grid layout for inline styling -->
             <div class="col text-center">
@@ -55,15 +65,6 @@
                 type="submit"
                 class="btn btn-block btn-login"
                 style="background-color: #ff8a34"
-              >
-                Login
-              </button>
-
-              <button
-                type="button"
-                class="btn btn-block btn-cadastro"
-                style="background-color: #ff8a34; margin-left: 20px"
-                (click)="abrirCadastro()"
               >
                 Cadastrar
               </button>
