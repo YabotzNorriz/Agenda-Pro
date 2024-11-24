@@ -1,22 +1,28 @@
 {
   "usuario": [
     {
-      "id": 260271,
+      "id": "260271",
       "name": "Moss",
       "email": "moss@moss.com",
       "password": "123456"
     },
     {
-      "id": 46024,
+      "id": "46024",
       "name": "minhoco",
       "email": "minhoco@minhoco",
       "password": "654321"
     },
     {
-      "id": 258459,
+      "id": "258459",
       "name": "Tobito",
       "email": "tobito@obito.com",
       "password": "24680"
+    },
+    {
+      "id": 161079,
+      "name": "cleber",
+      "email": "cleber@cleber.com",
+      "password": "098765"
     }
   ],
   "atividade": [
