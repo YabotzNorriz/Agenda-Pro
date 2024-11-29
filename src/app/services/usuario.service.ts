@@ -30,12 +30,12 @@ export class UsuarioService {
   }
 
   cadastrarUsuario(usuario: Usuario): Observable<Usuario> {
-    usuario.id = this.generateRandomId();
+    usuario.id = String(this.generateRandomId());
     return this.http.post<Usuario>(this.urlAPI, usuario);
   }
 
   excluirUsuario(usuario: Usuario): Observable<Usuario> {
-    return this.http.delete<Usuario>(this.urlAPI + '/' + usuario.id);
+    return this.http.delete<Usuario>(this.urlAPI + '/' + Number(usuario.id));
   }
 
   login(email: string, senha: string): Observable<any> {

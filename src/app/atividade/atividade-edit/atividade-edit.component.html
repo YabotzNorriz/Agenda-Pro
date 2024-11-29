@@ -4,10 +4,10 @@
 
 <!--Main layout-->
 <main class="mt-5 pt-4">
-  <form (submit)="onSubmit()" [formGroup]="atividadeAddForm">
+  <form (submit)="onSubmit()" [formGroup]="atividadeEditForm">
     <div class="container">
       <!-- Heading -->
-      <h2 class="my-5 text-right atividade-text">Adicionar Atividade</h2>
+      <h2 class="my-5 text-right atividade-text">Editar Atividade</h2>
       <!--Grid row-->
       <div class="row">
         <!--Grid column-->
@@ -21,7 +21,7 @@
                 name="titulo"
                 class="form-control"
                 formControlName="titulo"
-                [(ngModel)]="titulo"
+                [(ngModel)]="atividade.titulo"
               />
               <label class="form-label" for="typeText">Título</label>
             </div>
@@ -31,7 +31,7 @@
                 name="descricao"
                 class="form-control"
                 formControlName="descricao"
-                [(ngModel)]="descricao"
+                [(ngModel)]="atividade.descricao"
               />
               <label class="form-label" for="typeText">Descrição</label>
             </div>
@@ -41,7 +41,7 @@
                 name="curso"
                 class="form-control"
                 formControlName="curso"
-                [(ngModel)]="curso"
+                [(ngModel)]="atividade.curso"
               />
               <label class="form-label" for="typeText">Curso</label>
             </div>
@@ -51,7 +51,7 @@
                 name="materia"
                 class="form-control"
                 formControlName="materia"
-                [(ngModel)]="materia"
+                [(ngModel)]="atividade.materia"
               />
               <label class="form-label" for="typeText">Matéria</label>
             </div>
@@ -62,7 +62,7 @@
                 name="dataHoje"
                 formControlName="dataHoje"
                 class="form-control"
-                [(ngModel)]="dataHoje"
+                [(ngModel)]="atividade.dataHoje"
                 placeholder="data lançamento"
                 aria-label="data lançamento"
                 aria-describedby="basic-addon1"
@@ -79,7 +79,7 @@
                 name="dataEntrega"
                 class="form-control"
                 formControlName="dataEntrega"
-                [(ngModel)]="dataEntrega"
+                [(ngModel)]="atividade.dataEntrega"
                 placeholder="data limite"
                 aria-label="data limite"
                 aria-describedby="basic-addon1"
@@ -92,7 +92,7 @@
                 name="pontos"
                 class="form-control"
                 formControlName="pontos"
-                [(ngModel)]="pontos"
+                [(ngModel)]="atividade.pontos"
                 aria-label="Pontos"
                 aria-describedby="basic-addon1"
               />
@@ -112,43 +112,43 @@
             <li class="list-group-item d-flex justify-content-between">
               <div>
                 <h6 class="my-0">Título</h6>
-                <small class="text-muted">{{ titulo }}</small>
+                <small class="text-muted">{{ atividade.titulo }}</small>
               </div>
             </li>
             <li class="list-group-item d-flex justify-content-between">
               <div>
                 <h6 class="my-0">Descrição</h6>
-                <small class="text-muted">{{ descricao }}</small>
+                <small class="text-muted">{{ atividade.descricao }}</small>
               </div>
             </li>
             <li class="list-group-item d-flex justify-content-between">
               <div>
                 <h6 class="my-0">Curso</h6>
-                <small class="text-muted">{{ curso }}</small>
+                <small class="text-muted">{{ atividade.curso }}</small>
               </div>
             </li>
             <li class="list-group-item d-flex justify-content-between">
               <div>
                 <h6 class="my-0">Matéria</h6>
-                <small class="text-muted">{{ materia }}</small>
+                <small class="text-muted">{{ atividade.materia }}</small>
               </div>
             </li>
             <li class="list-group-item d-flex justify-content-between">
               <div>
                 <h6 class="my-0">Data de Criação</h6>
-                <small class="text-muted">{{ dataHoje }}</small>
+                <small class="text-muted">{{ atividade.dataHoje }}</small>
               </div>
             </li>
             <li class="list-group-item d-flex justify-content-between">
               <div>
                 <h6 class="my-0">Data de Entrega</h6>
-                <small class="text-muted">{{ dataEntrega }}</small>
+                <small class="text-muted">{{ atividade.dataEntrega }}</small>
               </div>
             </li>
             <li class="list-group-item d-flex justify-content-between">
               <div>
                 <h6 class="my-0">Pontos</h6>
-                <small class="text-muted">{{ pontos }}</small>
+                <small class="text-muted">{{ atividade.pontos }}</small>
               </div>
             </li>
             <li
@@ -156,14 +156,27 @@
             >
               <button
                 type="submit"
-                class="btn btn-block btn-confirmar"
+                class="btn btn-block btn-editar"
                 style="
                   background-color: #ff8a34;
                   text-align: center;
                   align-items: center;
                 "
               >
-                CONFIRMAR
+                EDITAR
+              </button>
+              <button
+                type="button"
+                class="btn btn-block btn-excluir"
+                (click)="excluirAtividade()"
+                style="
+                  background-color: #fd0000;
+                  text-align: center;
+                  align-items: center;
+                  color: #ffffff;
+                "
+              >
+                EXCLUIR
               </button>
             </li>
           </ul>

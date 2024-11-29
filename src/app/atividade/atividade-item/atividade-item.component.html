@@ -1,16 +1,17 @@
-<!-- Talvez ir para atividade-item -->
 <div class="card" style="width: 18rem; margin: 10px">
   <img src="/AgendaPro-Logo.jpg" class="card-img-top" alt="..." />
   <div class="card-body">
-    <h5 class="card-title">Título atividade</h5>
-    <p class="card-text">Descrição da atividade</p>
+    <h5 class="card-title">{{ atividade.titulo }}</h5>
+    <p class="card-text">{{ atividade.descricao }}</p>
   </div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item">Data de criação: DD/MM/AAAA</li>
-    <li class="list-group-item">Data para entregar: DD/MM/AAAA</li>
-    <li class="list-group-item">Pontos: X</li>
+    <li class="list-group-item">Data de Criação: {{ atividade.dataHoje }}</li>
+    <li class="list-group-item">
+      Data de Entrega: {{ atividade.dataEntrega }}
+    </li>
+    <li class="list-group-item">Pontos: {{ atividade.pontos }}</li>
   </ul>
   <div class="card-body text-center">
-    <button class="btn" (click)="abrirEditor()">EDITAR</button>
+    <button class="btn" (click)="abrirEditor(atividade.id)">EDITAR</button>
   </div>
 </div>

@@ -1,0 +1,11 @@
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* ou space-between, space-around, dependendo da necessidade */
+}
+
+.col-md-3 {
+  flex: 1 1 calc(25% - 20px); /* Para quatro itens por linha, ajuste conforme necessário */
+  margin: 10px;
+  box-sizing: border-box;
+}

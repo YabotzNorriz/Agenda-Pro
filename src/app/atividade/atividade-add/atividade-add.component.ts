@@ -19,6 +19,13 @@ import { LoginComponent } from '../../login/login.component';
 })
 export class AtividadeAddComponent implements OnInit {
   atividadeAddForm!: FormGroup;
+  descricao: string = 'Descrição';
+  titulo: string = 'Título';
+  curso: string = 'Curso';
+  materia: string = 'Matéria';
+  dataHoje!: Date;
+  dataEntrega!: Date;
+  pontos: number = 0;
 
   constructor(
     private router: Router,
@@ -49,8 +56,9 @@ export class AtividadeAddComponent implements OnInit {
         .subscribe((atividade) => {
           console.log(atividade);
         });
+      this.router.navigate(['/home']);
     } else {
-      console.log(this.atividadeAddForm);
+      console.log('SUS' + this.atividadeAddForm);
     }
   }
 }

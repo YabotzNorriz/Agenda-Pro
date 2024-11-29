@@ -1,4 +1,8 @@
 <header>
   <app-header></app-header>
 </header>
-<app-atividade-item></app-atividade-item>
+<div class="card-container">
+  <div *ngFor="let item of atividades" class="col-md-3">
+    <app-atividade-item [atividade]="item"></app-atividade-item>
+  </div>
+</div>
