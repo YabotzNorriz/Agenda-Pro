@@ -20,7 +20,7 @@ import { Usuario } from '../Usuario';
 })
 export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
-  public static usuarioLogado: Usuario;
+  public static idUsuarioLogado: number;
 
   constructor(private usuarioService: UsuarioService, private router: Router) {
     // this.loginForm.valueChanges.subscribe((value) => {
@@ -42,8 +42,8 @@ export class LoginComponent implements OnInit {
       this.usuarioService.login(email, password).subscribe((users) => {
         if (users.length > 0) {
           console.log(users);
-          LoginComponent.usuarioLogado = users;
-          console.log('Usuário logado: ', users);
+          LoginComponent.idUsuarioLogado = users[0].id;
+          console.log('Usuário logado: ', users[0].id);
           this.router.navigate(['/home']);
         } else {
           console.log('Credenciais inválidas');
@@ -58,7 +58,7 @@ export class LoginComponent implements OnInit {
     this.router.navigate(['/cadastro']);
   }
 
-  public static getUsuarioLogado(): Usuario {
-    return this.usuarioLogado;
+  public static getUsuarioLogado(): number {
+    return this.idUsuarioLogado;
   }
 }

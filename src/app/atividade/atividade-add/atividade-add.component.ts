@@ -8,6 +8,7 @@ import {
 } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AtividadeService } from '../../services/atividade.service';
+import { LoginComponent } from '../../login/login.component';
 
 @Component({
   selector: 'app-atividade-add',
@@ -40,11 +41,16 @@ export class AtividadeAddComponent implements OnInit {
     if (this.atividadeAddForm.valid) {
       console.log('Atividade Add é válido');
       const novaAtividade = this.atividadeAddForm.value;
+      console.log(
+        this.atividadeAddForm + '\nUsuario:' + LoginComponent.getUsuarioLogado()
+      );
       this.atividadeService
         .cadastrarAtividade(novaAtividade)
         .subscribe((atividade) => {
           console.log(atividade);
         });
+    } else {
+      console.log(this.atividadeAddForm);
     }
   }
 }

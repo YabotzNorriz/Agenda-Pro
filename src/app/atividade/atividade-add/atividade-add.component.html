@@ -16,25 +16,47 @@
           <div class="card p-4">
             <!--Grid row-->
             <div class="form-outline">
-              <input type="text" id="typeText" class="form-control" />
+              <input
+                type="text"
+                name="titulo"
+                class="form-control"
+                formControlName="titulo"
+              />
               <label class="form-label" for="typeText">Título</label>
             </div>
             <div class="form-outline">
-              <input type="text" id="typeText" class="form-control" />
+              <input
+                type="text"
+                name="descricao"
+                class="form-control"
+                formControlName="descricao"
+              />
               <label class="form-label" for="typeText">Descrição</label>
             </div>
             <div class="form-outline">
-              <input type="text" id="typeText" class="form-control" />
+              <input
+                type="text"
+                name="curso"
+                class="form-control"
+                formControlName="curso"
+              />
               <label class="form-label" for="typeText">Curso</label>
             </div>
             <div class="form-outline">
-              <input type="text" id="typeText" class="form-control" />
+              <input
+                type="text"
+                name="materia"
+                class="form-control"
+                formControlName="materia"
+              />
               <label class="form-label" for="typeText">Matéria</label>
             </div>
             <!--Username-->
             <div class="form-outline">
               <input
                 type="date"
+                name="dataHoje"
+                formControlName="dataHoje"
                 class="form-control"
                 placeholder="data lançamento"
                 aria-label="data lançamento"
@@ -49,7 +71,9 @@
             <div class="form-outline">
               <input
                 type="date"
+                name="dataEntrega"
                 class="form-control"
+                formControlName="dataEntrega"
                 placeholder="data limite"
                 aria-label="data limite"
                 aria-describedby="basic-addon1"
@@ -59,7 +83,9 @@
             <div class="form-outline">
               <input
                 type="number"
+                name="pontos"
                 class="form-control"
+                formControlName="pontos"
                 aria-label="Pontos"
                 aria-describedby="basic-addon1"
               />

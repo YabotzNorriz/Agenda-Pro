@@ -18,9 +18,12 @@ img {
   max-width: "100%";
   height: auto;
 }
-
+.nav-link.active {
+  font-weight: bold;
+  border-bottom: 2px solid #ff8a34;
+}
 .img-logo {
-  width: 75px;
+  max-width: 75px;
 }
 
 @media (min-width: 768px) {
