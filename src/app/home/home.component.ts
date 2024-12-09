@@ -5,6 +5,7 @@ import { LoginComponent } from '../login/login.component';
 import { CommonModule } from '@angular/common';
 import { Atividade } from '../Atividade';
 import { AtividadeService } from '../services/atividade.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -17,8 +18,15 @@ export class HomeComponent implements OnInit {
   idUsuario: number = LoginComponent.getUsuarioLogado();
   atividades: Atividade[] = [];
 
-  constructor(private atividadeService: AtividadeService) {
+  constructor(
+    private atividadeService: AtividadeService,
+    private router: Router
+  ) {
     console.log('ID USUARIO HOME: ' + this.idUsuario);
+    if (this.idUsuario == undefined) {
+      alert('Usuário não logado!');
+      this.router.navigate(['/login']);
+    }
   }
 
   ngOnInit(): void {

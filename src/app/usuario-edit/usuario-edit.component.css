@@ -1,0 +1,16 @@
+.form-editar {
+  background-color: #d9d9d9;
+}
+
+.cadastro-text {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: inline-block;
+  border-bottom: 3px solid #ff8a34;
+  padding-bottom: 2px;
+}
+
+.btn-confirmar {
+  color: #ffffff;
+}

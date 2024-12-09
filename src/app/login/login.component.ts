@@ -40,17 +40,17 @@ export class LoginComponent implements OnInit {
       console.log('LoginForm é válido');
       const { email, password } = this.loginForm.value;
       this.usuarioService.login(email, password).subscribe((users) => {
-        if (users.length > 0) {
+        if (users.length == 1) {
           console.log(users);
           LoginComponent.idUsuarioLogado = users[0].id;
           console.log('Usuário logado: ', users[0].id);
           this.router.navigate(['/home']);
         } else {
-          console.log('Credenciais inválidas');
+          alert('Senha e/ou e-mail incorretos!');
         }
       });
     } else {
-      return;
+      alert('Login inválido!');
     }
   }
 

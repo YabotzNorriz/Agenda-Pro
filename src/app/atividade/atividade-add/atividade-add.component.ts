@@ -26,11 +26,17 @@ export class AtividadeAddComponent implements OnInit {
   dataHoje!: Date;
   dataEntrega!: Date;
   pontos: number = 0;
+  idUsuario = LoginComponent.getUsuarioLogado();
 
   constructor(
     private router: Router,
     private atividadeService: AtividadeService
-  ) {}
+  ) {
+    if (this.idUsuario == undefined) {
+      alert('Usuário não logado!');
+      this.router.navigate(['/login']);
+    }
+  }
 
   ngOnInit(): void {
     this.atividadeAddForm = new FormGroup({

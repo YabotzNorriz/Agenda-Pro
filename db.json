@@ -1,41 +1,17 @@
 {
   "usuario": [
     {
-      "id": "260271",
-      "name": "Moss",
-      "email": "moss@moss.com",
+      "id": "577399",
+      "name": "MinhocoWasFound",
+      "email": "minhoco@minhoco.com",
       "password": "123456"
     },
     {
-      "id": "46024",
-      "name": "minhoco",
-      "email": "minhoco@minhoco",
-      "password": "654321"
-    },
-    {
-      "id": "258459",
-      "name": "Tobito",
-      "email": "tobito@obito.com",
-      "password": "24680"
-    },
-    {
-      "id": "161079",
-      "name": "cleber",
-      "email": "cleber@cleber.com",
-      "password": "098765"
+      "id": "360811",
+      "name": "Moss",
+      "email": "moss@moss.com",
+      "password": "123456"
     }
   ],
-  "atividade": [
-    {
-      "id": "550952",
-      "titulo": "Teste de id",
-      "descricao": "só um teste",
-      "curso": "teste",
-      "materia": "eu n aguento mais",
-      "dataHoje": "2024-11-28",
-      "dataEntrega": "2024-12-06",
-      "pontos": 10,
-      "idUsuario": "260271"
-    }
-  ]
+  "atividade": []
 }

@@ -20,6 +20,7 @@ import { Usuario } from '../Usuario';
 export class CadastroComponent implements OnInit {
   usuario!: Usuario;
   cadastroForm!: FormGroup;
+  emailExistente!: boolean;
 
   constructor(private router: Router, private usuarioService: UsuarioService) {}
 
@@ -33,12 +34,22 @@ export class CadastroComponent implements OnInit {
 
   onSubmit() {
     if (this.cadastroForm.valid) {
-      console.log('login form é válido');
       const novoUsuario = this.cadastroForm.value;
-      this.usuarioService.cadastrarUsuario(novoUsuario).subscribe();
-    }
+      const email = this.cadastroForm.get('email')?.value;
+      this.usuarioService.verificarEmailExistente(email).subscribe((existe) => {
+        this.emailExistente = existe;
+        console.log('Alterado em cima ' + this.emailExistente);
 
-    alert('Cadastro realizado com sucesso!');
-    this.router.navigate(['login']);
+        if (!this.emailExistente) {
+          console.log('Alterado em baixo ' + this.emailExistente);
+          this.usuarioService.cadastrarUsuario(novoUsuario).subscribe(() => {
+            alert('Cadastro realizado com sucesso!');
+            this.router.navigate(['login']);
+          });
+        } else {
+          alert('Email já cadastrado!');
+        }
+      });
+    }
   }
 }

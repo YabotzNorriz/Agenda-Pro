@@ -1,0 +1,83 @@
+<style>
+  #intro {
+    background-size: cover;
+    background-position: center;
+    max-width: 100vw;
+    height: 100vh;
+  }
+</style>
+
+<!-- Background image -->
+<div id="intro" class="bg-image shadow-2-strong">
+  <header>
+    <app-header></app-header>
+  </header>
+  <div
+    class="mask d-flex align-items-center h-100"
+    style="background-color: #ffffff"
+  >
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-xl-5 col-md-8">
+          <form
+            class="rounded shadow-5-strong p-5 form-editar"
+            (submit)="onSubmit()"
+            [formGroup]="alterarForm"
+          >
+            <h1 class="cadastro-text">Editar Usuário</h1>
+            <i class="bi bi-person"></i>
+            <br />
+            <br />
+            <!-- Nome -->
+            <div class="form-outline mb-4" data-mdb-input-init>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                class="form-control"
+                formControlName="name"
+                [(ngModel)]="usuario.name"
+              />
+              <label class="form-label" for="name">Nome</label>
+            </div>
+            <!-- Email input -->
+            <div class="form-outline mb-4" data-mdb-input-init>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="form-control"
+                formControlName="email"
+                [(ngModel)]="usuario.email"
+              />
+              <label class="form-label" for="email">Endereço de Email</label>
+            </div>
+            <!-- Password input -->
+            <div class="form-outline mb-4" data-mdb-input-init>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                class="form-control"
+                formControlName="password"
+                [(ngModel)]="usuario.password"
+              />
+              <label class="form-label" for="password">Senha</label>
+            </div>
+
+            <!-- 2 column grid layout for inline styling -->
+            <div class="col text-center">
+              <button
+                type="submit"
+                class="btn btn-block btn-confirmar"
+                style="background-color: #ff8a34"
+              >
+                ALTERAR
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 import { Usuario } from '../Usuario';
 
 @Injectable({
@@ -21,8 +21,20 @@ export class UsuarioService {
     return this.http.get<Usuario>(this.urlAPI + '/' + id);
   }
 
-  alterarCliente(usuario: Usuario): Observable<Usuario> {
-    return this.http.put<Usuario>(this.urlAPI + '/' + usuario.id, usuario);
+  alterarUsuario(usuario: Usuario, novoUsuario: Usuario): Observable<Usuario> {
+    return this.http.put<Usuario>(
+      this.urlAPI + '/' + Number(usuario.id),
+      novoUsuario
+    );
+  }
+
+  verificarEmailExistente(email: string): Observable<boolean> {
+    return this.getUsuarios().pipe(
+      map((usuarios: Usuario[]) => {
+        console.log('Lista de usuários:', usuarios);
+        return usuarios.some((usuario) => usuario.email === email);
+      })
+    );
   }
 
   private generateRandomId(): number {

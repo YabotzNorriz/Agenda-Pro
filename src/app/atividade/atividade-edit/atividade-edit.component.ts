@@ -48,7 +48,7 @@ export class AtividadeEditComponent implements OnInit {
           console.log(this.atividade);
         });
     } else {
-      console.log('ID INVÁLIDO!');
+      alert('ID DA ATIVIDADE INVÁLIDO!');
     }
 
     this.atividadeEditForm = new FormGroup({
