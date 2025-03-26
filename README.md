@@ -1,27 +1,32 @@
 # AgendaPro
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.3.
+Esse projeto foi gerado usando [Angular CLI](https://github.com/angular/angular-cli) version 18.2.3.
 
-## Development server
+___
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Projeto de uma agenda escolar utilizando AngularTS e a API REST json-server.
 
-## Code scaffolding
+Para iniciar o projeto é necessário ter a versão mais recente do Node.js.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Bibliotecas usadas:
 
-## Build
+- AngularTS versão 18.2.3
+- json-server versão 0.2.0
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Instalando AngularTS
 
-## Running unit tests
+Já com o Node.js instalado:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```
+npm install -g @Angular/cli
+```
 
-## Running end-to-end tests
+## Instalando json-server
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```
+npm install json-server
+```
 
-## Further help
+___
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Autores: João Pedro Andrade Paes Pimentel Barbosa, Pedro Gabriel Souza Lopes e Tobias Reis Carneiro
